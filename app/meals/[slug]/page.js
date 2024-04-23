@@ -7,6 +7,10 @@ import classes from './page.module.css';
 export default function MealDetailsPage({ params }) {
   const meal = getMeal(params.slug);
 
+  if (!meal) {
+    notFound();
+  }
+
   const { instructions, image, title, summary, creator_email, creator } = meal;
 
   const formattedInstructions = instructions.replace(/\n/g, '<br />');
