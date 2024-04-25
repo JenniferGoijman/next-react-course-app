@@ -87,3 +87,9 @@
 .actions button:focus {
   background: linear-gradient(90deg, #fd4715, #f9b241);
 }
+
+.actions button:disabled {
+  background: #b3b9c6;
+  color: #000000;
+
+}
